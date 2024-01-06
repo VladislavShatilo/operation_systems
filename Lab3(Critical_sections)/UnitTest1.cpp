@@ -1,6 +1,6 @@
 #include "pch.h"
 #include "CppUnitTest.h"
-#include "../OsLab3/FileName.cpp"
+#include "../OsLab3/main.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
