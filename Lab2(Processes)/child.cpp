@@ -1,25 +1,6 @@
-#include <iostream>
-#include<string>
-#include<windows.h>
+#include"child.h"
 #include<conio.h>
-#include <vector>
-
-void fill_result(const double* arr, const int size,std::vector<double>& result)
-{
-    for (int i = 0; i < size; i++)
-    {
-        if (abs(static_cast<int>(arr[i] * 10)) % 10 < 5)
-        {
-            result.push_back(arr[i]);
-        }
-        Sleep(25);
-    }
-}
-
-std::vector<double> get_result(std::vector<double>& result)
-{
-    return result;
-}
+#include <string>
 
 int main(int argc, char* argv[])
 {
