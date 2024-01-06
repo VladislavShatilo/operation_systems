@@ -1,20 +1,4 @@
 #include "ArrayWork.h"
-DWORD WINAPI work_with_array(const LPVOID siz)
-{
-    const auto params = static_cast<array_work*>(siz);
-    std::cout << "Tread is started\n";
-    for (unsigned long long i = 0; i < params->get_size(); ++i)
-    {
-        if (abs(static_cast<int>(params->get_array()[i] * 10)) % 10 < 5)
-        {
-            std::cout << params->get_array()[i]<<" ";
-            params->add_element(params->get_array()[i]);
-        }
-        Sleep(25);
-    }
-    std::cout << "\nTread is ended\n";
-    return 0;
-}
 
 int main()
 {
@@ -38,5 +22,6 @@ int main()
     WaitForSingleObject(worker, INFINITE);
     CloseHandle(worker);
     array_work.print_result();
+
     
 }
